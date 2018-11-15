@@ -1,7 +1,4 @@
-/*  login  */
-body {
-  background-color: #222D32;
-}
+
 .panel {
   background-color: transparent;
   border: none;
@@ -13,3 +10,4 @@ body {
 .panel .panel-body {
   background-color: #fff;
 }
+
