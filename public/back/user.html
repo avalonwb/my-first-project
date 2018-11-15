@@ -26,7 +26,7 @@
     <div class="list">
        <ul>
          <li>
-            <a href="user.html"><i class="glyphicon glyphicon-user"></i><span>用户信息</span></a>
+            <a href="user.html" class="active"><i class="glyphicon glyphicon-user"></i><span>用户信息</span></a>
          </li>
          <li>
             <a href="javascript:;" class="pull-down"><i class="glyphicon glyphicon-list"></i><span>分类管理</span></a>
@@ -41,30 +41,39 @@
        </ul>
     </div>
   </div>
-  
+
   <!-- 顶部 -->
   <div class="site-top">
-     <a class="icon-left pull-left">
-        <i class="glyphicon glyphicon-align-justify"></i>
-     </a>
-     <a class="icon-right pull-right">
-        <i class="glyphicon glyphicon-log-out"></i>
-     </a>
+      <a class="icon-left pull-left">
+         <i class="glyphicon glyphicon-align-justify"></i>
+      </a>
+      <a class="icon-right pull-right">
+         <i class="glyphicon glyphicon-log-out"></i>
+      </a>
   </div>
 
-  <!-- 右侧主体 -->
   <div class="main">
     <div class="container-fluid">
-       <!-- 路径导航 -->
-        <ol class="breadcrumb">
-          <li><a href="index.html">管理系统</a></li>
-          <li class="active">首页</li>
-        </ol>
-       <!-- 图表 -->
-        <div class="form">
-           <div class="e-left pull-left"></div>
-           <div class="e-right pull-right"></div>
-        </div>
+        <!-- 路径导航 -->
+          <ol class="breadcrumb">
+            <li><a href="index.html">管理系统</a></li>
+            <li class="active">用户管理</li>
+          </ol>
+        <!-- 表格 -->     				
+          <table class="table table-bordered table-hover user-table">
+            <thead>
+              <tr>
+                <td>序号</td>
+                <td>用户名</td>
+                <td>手机号</td>
+                <td>状态</td>
+                <td>操作</td>
+              </tr>
+            </thead>
+            <tbody>
+            
+            </tbody>
+          </table>
     </div>
   </div>
 
@@ -92,6 +101,25 @@
       </div>
   </div>
 
+  <!-- 表格模板 -->
+  <script type="text/template" id="tmp">
+    {{ each rows ele index }}
+      <tr>
+        <td>{{ ele.id }}</td>
+        <td>{{ ele.username }}</td>
+        <td>{{ ele.mobile }}</td>
+        <td>{{ ele.isDelete == 1 ? "正常" : "禁用" }}</td>
+        <td>
+           {{ if ele.isDelete == 1 }}
+             <button class="btn btn-danger">禁用</button>
+           {{ else }}
+             <button class="btn btn-success">启用</button>
+           {{ /if }}      
+        </td>
+      </tr>
+    {{ /each }}
+  </script>
+
 <script src="lib/jquery/jquery.min.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="lib/nprogress/nprogress.js"></script>
@@ -99,7 +127,7 @@
 <script src="lib/artTemplate/template-web.js"></script>
 <script src="js/common.js"></script>
 <script src="js/isLogin.js"></script>
-<script src="js/index.js"></script>
+<script src="js/user.js"></script>
 <script>
 </script>
 </body>

@@ -1,4 +1,23 @@
-
+/* 重置样式 */
+h1,
+h2,
+h3,
+h4 {
+  padding: 0;
+  margin: 0;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+/*  login  */
 .panel {
   background-color: transparent;
   border: none;
@@ -10,4 +29,126 @@
 .panel .panel-body {
   background-color: #fff;
 }
-
+/*  公共组件  */
+/* 侧边栏 */
+.aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 100%;
+  background-color: #222D32;
+  z-index: 2;
+  transition: all 1s;
+}
+.aside.hide-slide {
+  left: -180px;
+}
+.aside .title {
+  width: 180px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  background-color: #367FA9;
+}
+.aside .user {
+  width: 100%;
+  padding-top: 30px;
+}
+.aside .user img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+.aside .user p {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  padding-top: 8px;
+  text-shadow: 2px 2px 2px #ccc;
+}
+.aside .list {
+  padding-top: 30px;
+}
+.aside .list ul li {
+  padding: 3px 0;
+}
+.aside .list ul li a {
+  display: block;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  color: whitesmoke;
+  font-size: 16px;
+  padding-left: 40px;
+  border-left: 3px solid transparent;
+}
+.aside .list ul li a i {
+  padding-right: 6px;
+}
+.aside .list ul li a.active {
+  background-color: #1D1F21;
+  border-left-color: #006699;
+}
+.aside .list ul li .second {
+  display: none;
+}
+.aside .list ul li .second > a {
+  padding-left: 60px;
+}
+/* 顶部 */
+.site-top {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  background-color: #3C8DBC;
+  padding-left: 180px;
+  transition: all 1s;
+}
+.site-top.hide-slide {
+  padding-left: 0;
+}
+.site-top a {
+  text-align: center;
+  display: block;
+  width: 50px;
+  height: 50px;
+  padding-top: 11px;
+}
+.site-top a i {
+  font-size: 24px;
+  color: whitesmoke;
+}
+/* 模态框 */
+.modal-body .red {
+  color: #e93323;
+}
+/*  index  */
+.main {
+  width: 100%;
+  height: 1000px;
+  padding-left: 180px;
+  padding-top: 50px;
+  transition: all 1s;
+}
+.main.hide-slide {
+  padding-left: 0;
+}
+.main .breadcrumb {
+  margin-top: 20px;
+}
+.main .form {
+  width: 100%;
+}
+.main .form > div {
+  width: 48%;
+  height: 400px;
+}
+/* 表格样式 */
+.table.user-table tr td {
+  text-align: center;
+  vertical-align: middle;
+}
