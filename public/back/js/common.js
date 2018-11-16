@@ -40,7 +40,7 @@ $(function () {
   $(".icon-right").click(function () {
     //  console.log(1);
     
-    $(".modal").modal("show");
+    $("#logoutModal").modal("show");
 
     $("#logoutBtn").click(function () { 
         $.ajax({

@@ -51,7 +51,8 @@
          <i class="glyphicon glyphicon-log-out"></i>
       </a>
   </div>
-
+  
+  <!-- 右侧主体 -->
   <div class="main">
     <div class="container-fluid">
         <!-- 路径导航 -->
@@ -74,10 +75,16 @@
             
             </tbody>
           </table>
+        <!-- 准备分页容器 -->
+          <div class="paginator text-right">
+            <ul id="pagintor">
+               
+            </ul>
+          </div>
     </div>
   </div>
 
-  <!-- 模态框 -->
+  <!-- 退出模态框 -->
   <div class="modal fade" tabindex="-1" id="logoutModal">
       <!-- 内部的模态框 -->
       <div class="modal-dialog modal-sm">
@@ -100,16 +107,41 @@
         </div>
       </div>
   </div>
+  
+  <!-- 操作模态框 -->
+  <div class="modal fade" tabindex="-1" id="btnModal">
+      <!-- 内部的模态框 -->
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <!-- 头部 -->
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+            <h4 class="modal-title">温馨提示</h4>
+          </div>
+          <!-- 中间 -->
+          <div class="modal-body">
+            <p class="red"><i class="glyphicon glyphicon-info-sign"></i><span>您确定要执行操作吗？</span></p>
+          </div>
+          <!-- 底部 -->
+          <!-- data-dismiss="modal" 可以用于关闭模态框 -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <button type="button" class="btn btn-primary" id="StatusBtn">确定</button>
+          </div>
+        </div>
+      </div>
+  </div>
+
 
   <!-- 表格模板 -->
   <script type="text/template" id="tmp">
     {{ each rows ele index }}
       <tr>
-        <td>{{ ele.id }}</td>
+        <td>{{ (index + 1) + (page - 1)*size }}</td>
         <td>{{ ele.username }}</td>
         <td>{{ ele.mobile }}</td>
         <td>{{ ele.isDelete == 1 ? "正常" : "禁用" }}</td>
-        <td>
+        <td data-id="{{ ele.id }}">
            {{ if ele.isDelete == 1 }}
              <button class="btn btn-danger">禁用</button>
            {{ else }}
@@ -125,6 +157,7 @@
 <script src="lib/nprogress/nprogress.js"></script>
 <script src="lib/echarts/echarts.min.js"></script>
 <script src="lib/artTemplate/template-web.js"></script>
+<script src="lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
 <script src="js/common.js"></script>
 <script src="js/isLogin.js"></script>
 <script src="js/user.js"></script>
