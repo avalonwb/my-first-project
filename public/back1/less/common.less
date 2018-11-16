@@ -1,0 +1,170 @@
+/* 重置样式 */
+h1,h2,h3,h4 {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+// lv ha 
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+/*  登录页  */
+
+.login {
+   margin-top: 150px; 
+
+  .panel {
+   
+    .panel-heading {
+      font-size: 18px;
+    }
+  }
+}
+
+/*  公共样式  */
+
+/*  侧边栏  */
+.aside {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 180px;
+  height: 100%;
+  background-color: #222D32;
+  z-index: 2;
+  
+  h1 {
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    font-size: 25px;
+    color: azure;
+    background-color: #367FA9;
+  }
+
+  .user {
+    padding-top: 30px;
+
+    img {
+      display: block;
+      border-radius: 50%;
+      margin: 0 auto;
+      width: 129px;
+      height: 129px;
+    }
+
+    p {
+      padding-top: 15px;
+      font-size: 23px;
+      text-align: center;
+      color: azure;
+    }
+  }
+
+  .list {
+    padding-top: 30px;
+
+    ul {
+      li {
+        padding: 5px 0;
+        
+        .second {
+          display: none;
+
+          > a {
+            padding-left: 60px;
+          }
+        }
+
+        a {
+          display: block;
+          width: 100%;
+          height: 40px;
+          line-height: 40px;
+          color: aliceblue;
+          padding-left: 40px;
+          font-size: 17px;
+          border-left: 3px solid transparent;
+          
+          /*  当前页面高亮样式  */
+          &.active {
+            background-color: #1D1F21;
+            border-left-color: #006699;
+          }
+
+          i {
+            padding-right: 4px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+/* 公共顶部 */
+.site-top {
+  position: fixed;
+  top: 0;
+  height: 50px;
+  width: 100%;
+  padding-left: 180px;
+  background-color: #3C8DBC;
+  
+  a {
+    padding-top: 10px;
+    
+    &#icon-left {
+      padding-left: 20px;
+    }
+    
+    &#icon-right {
+      padding-right: 20px;
+    }
+
+    i{
+      font-size: 25px;
+      color: aliceblue;
+    }
+  }
+}
+
+/*  右侧主体  */
+.main {
+  width: 100%;
+  height: 1500px;
+  padding: 50px 0 0 180px;
+
+  .breadcrumb {
+     padding-top: 30px;
+  }
+}
+
+/*  主页  */
+
+.eform {
+  width: 100%;
+
+  > div {
+    width: 48%;
+    height: 400px;
+  }
+}
+
+
+
+
+
+
+
