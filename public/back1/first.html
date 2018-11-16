@@ -63,10 +63,30 @@
      <i class="glyphicon glyphicon-log-out"></i>
   </a>
 </div>
+
+<!-- 退出模态框 -->
+<div class="modal fade" tabindex="-1" id="logout">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        <h4 class="modal-title">Warning</h4>
+      </div>
+      <div class="modal-body">
+        <p><i class="glyphicon glyphicon-info-sign"></i><span>Do you want to logout your account ?</span></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">NO</button>
+        <button type="button" class="btn btn-primary" id="logoutBtn">YES</button>
+      </div>
+    </div>
+  </div>
+</div>
   
 <script src="lib/jquery/jquery.min.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="lib/nprogress/nprogress.js"></script>
+<script src="js/isLogin.js"></script>
 <script src="js/common.js"></script>
 
 <script>

@@ -67,7 +67,6 @@
    // 使用刚指定的配置项和数据显示图表。
    leftChart.setOption(option);
    rightChart.setOption(option1);
-
-　　
+  　　
 
  });
