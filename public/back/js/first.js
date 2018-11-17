@@ -19,7 +19,16 @@ $(function () {
         //  console.log(info);
         var str = template("tmp",info);
         $("tbody").html(str);
-        
+        $("#pagebox").bootstrapPaginator({
+          bootstrapMajorVersion:3,//默认是2，如果是bootstrap3版本，这个参数必填
+          currentPage:currentPage,//当前页
+          totalPages:Math.ceil(info.total / info.size),//总页数
+          onPageClicked:function(event, originalEvent, type,page){
+            //为按钮绑定点击事件 page:当前点击的按钮值
+            currentPage = page;
+            render();
+          }
+        });
         
       }
     }); 
@@ -29,6 +38,12 @@ $(function () {
   // 表单验证初始化
 
   $("#first-form").bootstrapValidator({
+
+    feedbackIcons: {
+      valid: 'glyphicon glyphicon-ok',
+      invalid: 'glyphicon glyphicon-remove',
+      validating: 'glyphicon glyphicon-refresh'
+    },
 
      fields : {
 
