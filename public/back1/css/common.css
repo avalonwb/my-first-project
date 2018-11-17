@@ -134,7 +134,7 @@ a:active {
   margin-top: 15px;
 }
 /*  模态框  */
-#logout .modal-body p {
+.modal-body p {
   color: #e93323;
 }
 /*  主页  */
