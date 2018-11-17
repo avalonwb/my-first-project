@@ -44,6 +44,33 @@ $(function () {
      }
   });
   
+  var validator = $("#first-form").data('bootstrapValidator');
+
+  //  验证通过后 发送
+  
+  $("#first-form").on("success.form.bv",function (event) {
+      event.preventDefault();  
+
+      $.ajax({
+        type : "post",
+        url : "/category/addTopCategory",
+        data : $(this).serialize(),
+        dataType : "json",
+        success : function ( info ) {
+          //  console.log(info);
+          if(info.success){
+            // 重置并关闭模态框
+            $("#addModal").modal("hide");
+            validator.resetForm(true);
+            // 渲染第一页
+            currentPage = 1;
+            render();
+          }  
+        }  
+      });
+
+  });
+  
   // 点击按钮弹出模态框
 
   $(".add-btn").click(function () {
