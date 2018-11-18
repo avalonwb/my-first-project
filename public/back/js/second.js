@@ -63,7 +63,7 @@ $(function () {
       },
       dataType: "json",
       success: function (info) {
-        //  console.log(info);
+        // console.log(info); 
         var str = template("tmp", info);
         $("tbody").html(str);
 
@@ -80,7 +80,8 @@ $(function () {
       }
     });
   }
-
+  
+  // 点击显示模态框 动态渲染下拉菜单 
   $(".add-btn").click(function () {
 
     $("#addModal").modal("show");
@@ -90,7 +91,7 @@ $(function () {
       url: "/category/querySecondCategoryPaging",
       data: {
         page: 1,
-        pageSize: 50
+        pageSize: 100
       },
       dataType: "json",
       success: function (info) {
@@ -129,16 +130,32 @@ $(function () {
   });
   
   // 表单验证通过后发送填加请求
-  // $("#second-form").on('success.form.bv', function (event) {
-  //     event.preventDefault();
-
-  //     $.ajax({
-  //        type : "post",
-  //        url : "/category/addSecondCategory",
-
-  //     });
+  $("#second-form").on('success.form.bv', function (event) {
+      event.preventDefault();
+      
+      $.ajax({
+         type : "post",
+         url : "/category/addSecondCategory",
+         data : $("#second-form").serialize(),
+         dataType: "json",
+         success : function (info) {
+            // console.log(info);
+            if(info.success){
+              // 关闭模态框
+              $("#addModal").modal("hide");
+              // 渲染第一页
+              currentPage = 1;
+              render();
+              // 重置模态框状态
+              validator.resetForm(true);
+              // 手动重置图片和下拉菜单
+              $(".dropdown span.txt").text("选择一级分类");
+              $("#imgview").attr("src","images/none.png");
+            }           
+         }
+      });
     
-  // });
+  });
 
 
 });
