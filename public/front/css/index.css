@@ -26,6 +26,7 @@ html {
   min-width: 320px;
   margin: 0 auto;
   position: relative;
+  padding: 45px 0 55px;
 }
 /*  头部  */
 .header {
@@ -61,7 +62,7 @@ html {
   color: whitesmoke;
   font-size: 25px;
   text-align: center;
-  line-height: 45px;
+  line-height: 52px;
 }
 /*  底部  */
 .footer {
@@ -87,4 +88,10 @@ html {
 }
 .footer ul li a i {
   font-size: 28px;
+}
+/*  主体  */
+.main {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
