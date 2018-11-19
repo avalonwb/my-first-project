@@ -122,4 +122,34 @@ $(function () {
     }
   });
 
+  // 验证通过后发送给后台
+  $("#form").on("success.form.bv",function (event) {
+      event.preventDefault();
+      
+      var str = $("#form").serialize();
+      
+      $.ajax({
+         type : "post",
+         url : "/category/addSecondCategory",
+         data : str,
+         dataType : "json",
+         success :  function (info) {
+          if(info.success){
+            // 关闭模态框
+            $("#addModal").modal("hide");
+            // 重新渲染第一页
+            currentPage = 1;
+            render();
+            // 重置模态框
+            validator.resetForm(true);
+            // 手动重置下拉菜单和图片
+            $("span.txt").text("一級分類を選択してください");
+            $(".imgbox img").attr("src","images/none.png")
+          }
+         }
+      });
+      
+      
+  })
+
 });

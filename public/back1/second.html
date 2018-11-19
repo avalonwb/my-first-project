@@ -145,6 +145,7 @@
                 </ul>
               </div>
               <input type="hidden" name="categoryId">
+              <input type="hidden" name="hot" value="1">
             </div>
             <!-- 输入框 -->
             <div class="form-group">
@@ -158,8 +159,10 @@
             </div>
             <!-- 图片预览 -->
             <div class="form-group">
-              <img src="" alt="" height="100">
-              <input type="hidden" id="imgView" name="brandLogo">
+              <div class="imgbox">
+                <img src="images/none.png" alt="" height="100">
+                <input type="hidden" id="imgView" name="brandLogo">
+              </div>
             </div>
           </div>
           <div class="modal-footer">
@@ -191,6 +194,8 @@
      <li data-id="{{ ele.id }}"><a href="#">{{ ele.categoryName }}</a></li>
    {{ /each }}
   </script>
+
+
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/bootstrap/js/bootstrap.min.js"></script>
   <script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
