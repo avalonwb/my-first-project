@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>分类页</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="lib/mui/css/mui.css">
+  <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/category.css">
+
+  <style>
+  </style>
+</head>
+
+<body>
+
+
+  <div class="container">
+
+    <!-- 头部 -->
+    <div class="header">
+      <a href="index.html" class="fa fa-home" id="icon-left"></a>
+      <h1>乐淘剁手</h1>
+      <a href="search.html" class="fa fa-search" id="icon-right"></a>
+    </div>
+
+    <!-- 主体 -->
+    <div class="main">
+
+      <div class="left">
+        <div class="mui-scroll-wrapper">
+          <div class="mui-scroll">
+            <!-- 左侧区域滚动 -->
+            <ul class="left-list">
+
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="mui-scroll-wrapper">
+          <div class="mui-scroll">
+            <!-- 右侧区域滚动 -->
+            <ul class="right-list mui-clearfix">
+
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 底部 -->
+    <div class="footer">
+      <ul>
+        <li>
+          <a href="index.html">
+            <i class="fa fa-home"></i>
+            <p>首页</p>
+          </a>
+        </li>
+        <li>
+          <a href="category.html"  class="current">
+            <i class="fa fa-bars"></i>
+            <p>分类页</p>
+          </a>
+        </li>
+        <li>
+          <a href="cart.html">
+            <i class="fa fa-shopping-cart"></i>
+            <p>购物车</p>
+          </a>
+        </li>
+        <li>
+          <a href="user.html">
+            <i class="fa fa-user"></i>
+            <p>用户中心</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- 一级列表模板 -->
+  <script type="text/template" id="toptmp">
+    {{ each rows ele index }}
+      <li data-id="{{ ele.id }}">
+        <a href="javascript:;" class="{{ index == 0 ? 'active' : '' }}">{{ ele.categoryName }}</a>
+      </li>
+    {{ /each }}
+  </script>
+
+  <!-- 二级列表模板 -->
+  <script type="text/template" id="secondtmp">
+    {{ if rows.length == 0 }}
+        <p class="nomore">没有更多信息啦!!!</p>
+    {{ else }}
+
+      {{ each rows ele index }}
+      <li>
+        <a href="#">
+          <img src="{{ ele.brandLogo }}" alt="">
+          <p>{{ ele.brandName }}</p>
+        </a>
+      </li>
+      {{ /each }}
+
+    {{ /if }}
+  </script>
+
+  <script src="lib/zepto/zepto.min.js"></script>
+  <script src="lib/mui/js/mui.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/category.js"></script>
+  <script>
+  </script>
+</body>
+
+</html>

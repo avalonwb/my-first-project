@@ -1,0 +1,57 @@
+.main {
+  width: 100%;
+  height: 100%;
+}
+/*  左侧区域样式  */
+.left {
+  float: left;
+  width: 90px;
+  height: 100%;
+  position: relative;
+}
+.left .left-list li {
+  width: 100%;
+  background-color: #E3E4E5;
+}
+.left .left-list li a {
+  width: 100%;
+  height: 50px;
+  display: block;
+  text-align: center;
+  line-height: 50px;
+  color: #666;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.left .left-list li a.active {
+  background-color: #fff;
+  border-right: none;
+}
+/*  右侧区域样式  */
+.right {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.right .right-list li {
+  float: left;
+  width: 33.3%;
+  padding: 10px 0;
+}
+.right .right-list li a {
+  display: block;
+}
+.right .right-list li a p {
+  text-align: center;
+  padding-top: 10px;
+}
+.right .right-list li a img {
+  display: block;
+  width: 70px;
+  height: 50px;
+  margin: 0 auto;
+}
+.right .right-list .nomore {
+  padding: 20px;
+  color: #e92322;
+}

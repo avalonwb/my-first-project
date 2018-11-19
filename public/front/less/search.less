@@ -1,0 +1,83 @@
+
+/* 主体 */
+
+.main {
+  width: 100%;
+  height: 100%;
+}
+
+.search {
+  width: 100%;
+  padding: 10px;
+  position: relative;
+
+  #ipt {
+    height: 34px;
+    padding-left: 20px;
+    margin: 0;
+    border: 1px solid #479FFF;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+
+  button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 0 5px 5px 0; 
+  }
+}
+
+.box {
+   padding: 10px; 
+  
+  .nomore {
+    color: #e92232;
+    padding: 10px;
+  }
+
+  .title {
+    height: 30px;
+    line-height: 30px;
+    
+
+    > span {
+      float: left;
+    }
+
+    .right {
+      float: right;
+
+      > span {
+        padding-left: 3px;
+      }
+    }
+  }
+
+  .history {
+    margin-top: 10px;
+    border: 1px dashed #e92232;
+
+    li {
+      height: 30px;
+      padding: 0 10px;
+      line-height: 30px;
+      border-bottom: 1px dashed #e92232;
+      
+      &:last-of-type {
+        border-bottom: none;
+      }
+
+      a {
+        height: 30px;
+        display: block;
+        float: left;
+      }
+  
+      i {
+        float: right;
+        line-height: 30px;
+      }
+    }
+  }
+}
