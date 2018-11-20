@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>公式ホームページ</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="lib/mui/css/mui.css">
+  <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/category.css">
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- 头部 -->
+    <div class="header">
+      <a href="index.html" class="icon-left fa fa-home"></a>
+      <h1>鶴屋</h1>
+      <a href="search.html" class="icon-right fa fa-search"></a>
+    </div>
+
+    <!-- 内容 -->
+    <div class="main">
+
+      <!-- 左半部分 -->
+      <div class="left">
+        <div class="mui-scroll-wrapper">
+          <div class="mui-scroll">
+            <!-- 左侧区域滚动 -->
+            <ul class="left-content">
+
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 右半部分 -->
+      <div class="right">
+        <div class="mui-scroll-wrapper">
+          <div class="mui-scroll">
+            <!-- 右侧区域滚动 -->
+            <ul class="right-content mui-clearfix">
+    
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 底部 -->
+    <div class="footer">
+      <ul class="mui-clearfix">
+        <li>
+          <a href="index.html">
+            <i class="fa fa-home"></i>
+            <p>ホームページ</p>
+          </a>
+        </li>
+        <li>
+          <a href="category.html" class="current">
+            <i class="fa fa-bars"></i>
+            <p>カテゴリー</p>
+          </a>
+        </li>
+        <li>
+          <a href="cart.html">
+            <i class="fa fa-shopping-cart"></i>
+            <p>買い物</p>
+          </a>
+        </li>
+        <li>
+          <a href="user.html">
+            <i class="fa fa-user"></i>
+            <p>ユーザーセンター</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- 左侧模板 -->
+  <script type="text/template" id="leftTmp">
+    {{ each rows ele index }}
+     <li>
+        <a href="javascript:;" class="{{ index == 0 ? 'active' : '' }}"
+        data-id="{{ ele.id }}">{{ ele.categoryName }}</a>
+     </li>
+    {{ /each }}
+  </script>
+
+  <!-- 右侧模板 -->
+  <script type="text/template" id="rightTmp">
+    {{ if rows.length == 0 }}
+      <p class="nomore">there is nothing to show!!</p>
+    {{ else }}
+      {{ each rows ele index }}
+      <li>
+          <a href="javascript:;">
+            <img src="{{ ele.brandLogo }}" alt="">
+            <p>{{ ele.brandName }}</p>
+          </a>
+      </li>
+      {{ /each }}
+    {{ /if }}
+  </script>
+
+  <script src="lib/zepto/zepto.min.js"></script>
+  <script src="lib/mui/js/mui.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/category.js"></script>
+  <script>
+  </script>
+</body>
+
+</html>

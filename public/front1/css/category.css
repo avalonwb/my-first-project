@@ -1,0 +1,57 @@
+/* 分类页 */
+.main {
+  width: 100%;
+  height: 100%;
+}
+.left {
+  position: relative;
+  float: left;
+  width: 90px;
+  height: 100%;
+}
+.left .left-content li a {
+  display: block;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  line-height: 50px;
+  color: #666;
+  background-color: #E3E4E5;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.left .left-content li a.active {
+  background-color: #fff;
+  border-right: none;
+}
+.right {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+.right .right-content {
+  padding: 10px;
+}
+.right .right-content li {
+  float: left;
+  width: 33.3%;
+}
+.right .right-content li a {
+  display: block;
+  width: 100%;
+}
+.right .right-content li a img {
+  display: block;
+  width: 70px;
+  height: 50px;
+  margin: 0 auto;
+}
+.right .right-content li a p {
+  padding-top: 10px;
+  text-align: center;
+  color: #666;
+}
+.right .right-content .nomore {
+  color: #e93323;
+  padding: 10px;
+}
