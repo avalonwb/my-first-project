@@ -90,16 +90,14 @@
       <ul class="history">
         {{ each list ele index }} 
         <li>
-            <a href="#">{{ ele }}</a>
-            <i class="btn_delete mui-icon mui-icon-closeempty"
+            <a href="searchList.html?key={{ ele }}">{{ ele }}</a>
+            <i class="btn_delete mui-icon mui-icon-closeempty del-btn"
             data-index="{{ index }}"></i>
         </li>
         {{ /each }}
       </ul>
     {{ /if }}  
   </script>
-
-
 
 
   <script src="lib/zepto/zepto.min.js"></script>
