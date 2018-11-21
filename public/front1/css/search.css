@@ -1,0 +1,44 @@
+/*  历史记录  */
+.history {
+  margin-top: 15px;
+  padding: 10px 15px;
+}
+.history .nomore {
+  color: #e92232;
+  padding: 20px;
+  font-size: 25px;
+}
+.history .title > span {
+  float: left;
+  height: 30px;
+  line-height: 30px;
+}
+.history .title .right {
+  float: right;
+  height: 30px;
+  line-height: 30px;
+}
+.history .historyUl {
+  width: 100%;
+  margin-top: 10px;
+  border: 1px dashed #e92232;
+}
+.history .historyUl li {
+  height: 30px;
+  padding: 0 15px;
+  border-bottom: 1px dashed #e92232;
+}
+.history .historyUl li:last-of-type {
+  border-bottom: none;
+}
+.history .historyUl li a {
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  color: violet;
+}
+.history .historyUl li i {
+  float: right;
+  height: 30px;
+  line-height: 30px;
+}

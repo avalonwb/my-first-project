@@ -1,0 +1,58 @@
+/*  历史记录  */
+
+.history {
+  margin-top: 15px;
+  padding: 10px 15px; 
+  
+  
+  .nomore {
+    color: #e92232;
+    padding: 20px; 
+    font-size: 25px;            
+  }
+    
+  .title {
+    
+    > span {
+      float: left;
+      height: 30px;
+      line-height: 30px;  
+    }
+
+    .right {
+      float: right;
+      height: 30px;
+      line-height: 30px;
+    }
+  }
+
+  .historyUl {
+    width: 100%;
+    margin-top: 10px;
+    border: 1px dashed #e92232; 
+    
+    li {
+      height: 30px;
+      padding: 0 15px;
+      border-bottom: 1px dashed #e92232;
+      
+      &:last-of-type {
+        border-bottom: none;
+      }
+
+      a {
+        float: left;
+        height: 30px;
+        line-height: 30px;
+        color: violet;
+      }
+
+      i {
+        float: right;
+        height: 30px;
+        line-height: 30px;
+      }
+    }
+  }
+
+}

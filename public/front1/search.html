@@ -17,60 +17,97 @@
 
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <!-- 头部 -->
-    <div class="header">
-      <a href="index.html" class="icon-left mui-icon mui-icon-back"></a>
-      <h1>検索ページ</h1>
-    </div>
-
-    <!-- 内容 -->
-    <div class="main">
-
-    </div>
-
-    <!-- 底部 -->
-    <div class="footer">
-      <ul class="mui-clearfix">
-        <li>
-          <a href="index.html">
-            <i class="fa fa-home"></i>
-            <p>ホームページ</p>
-          </a>
-        </li>
-        <li>
-          <a href="category.html" class="current">
-            <i class="fa fa-bars"></i>
-            <p>カテゴリー</p>
-          </a>
-        </li>
-        <li>
-          <a href="cart.html">
-            <i class="fa fa-shopping-cart"></i>
-            <p>買い物</p>
-          </a>
-        </li>
-        <li>
-          <a href="user.html">
-            <i class="fa fa-user"></i>
-            <p>ユーザーセンター</p>
-          </a>
-        </li>
-      </ul>
-    </div>
-
+  <!-- 头部 -->
+  <div class="header">
+    <a href="index.html" class="icon-left mui-icon mui-icon-back"></a>
+    <h1>検索ページ</h1>
   </div>
 
+  <!-- 内容 -->
+  <div class="main">
 
+    <!-- 搜索框 -->
+    <div class="search">
+      <input type="text" placeholder="何を検索しようとするの??" id="ipt">
+      <button class="mui-btn mui-btn-primary addBtn">検索</button>
+    </div>
+     
+    <!-- 历史记录 -->
+    <div class="history">
 
-  <script src="lib/zepto/zepto.min.js"></script>
-  <script src="lib/mui/js/mui.js"></script>
-  <script src="lib/artTemplate/template-web.js"></script>
-  <script src="js/common.js"></script>
-  <script src="js/search.js"></script>
-  <script>
-  </script>
+    </div>
+    
+  </div>
+
+  <!-- 底部 -->
+  <div class="footer">
+    <ul class="mui-clearfix">
+      <li>
+        <a href="index.html">
+          <i class="fa fa-home"></i>
+          <p>ホームページ</p>
+        </a>
+      </li>
+      <li>
+        <a href="category.html">
+          <i class="fa fa-bars"></i>
+          <p>カテゴリー</p>
+        </a>
+      </li>
+      <li>
+        <a href="cart.html">
+          <i class="fa fa-shopping-cart"></i>
+          <p>買い物</p>
+        </a>
+      </li>
+      <li>
+        <a href="user.html">
+          <i class="fa fa-user"></i>
+          <p>ユーザーセンター</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- 历史记录模板 -->
+<script type="text/template" id="historyTmp">
+  <div class="title mui-clearfix">
+      <span>検索履歴</span>
+      <div class="right">
+          <i class="fa fa-trash"></i>
+          <span>すべてクリア</span>
+      </div>
+    </div>     
+    {{ if list.length == 0 }}
+
+      <p class="nomore">何もないんだ!!!</p>
+
+    {{ else }}
+
+    <ul class="historyUl">
+      {{ each list ele index }}
+      <li>
+        <a href="searchList.html?key={{ ele }}">{{ ele }}</a>
+        <i class="btn_delete mui-icon mui-icon-closeempty delBtn" 
+        data-index="{{ index }}"></i>
+      </li>
+      {{ /each }}  
+    </ul>
+
+    {{ /if }}  
+</script>
+
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/mui/js/mui.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/common.js"></script>
+<script src="js/search.js"></script>
+<script>
+</script>
 </body>
 
 </html>

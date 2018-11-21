@@ -1,0 +1,28 @@
+/*  下拉菜单  */
+.main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.selectList {
+  width: 100%;
+  padding: 10px;
+}
+.selectList li {
+  float: left;
+  width: 25%;
+  background-color: #eee;
+}
+.selectList li a {
+  display: block;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+}
+.selectList li a span {
+  color: #666;
+}
+.selectList li a i {
+  padding-left: 10px;
+  color: #666;
+}
