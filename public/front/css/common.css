@@ -106,6 +106,15 @@ html {
 .product {
   padding: 10px;
 }
+.product .loading {
+  position: absolute;
+  top: 260px;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  border: 3px solid #479FFF;
+  animation: rotate 1.5s infinite ease-in-out;
+}
 .product li {
   border: 1px solid #ccc;
 }
@@ -128,7 +137,9 @@ html {
   text-align: center;
 }
 .product li a img {
-  width: 100%;
+  width: 200px;
+  height: 150px;
+  margin: 0 auto;
   display: block;
 }
 .product li a .des {
@@ -159,4 +170,17 @@ html {
   top: 10px;
   right: 10px;
   border-radius: 0 5px 5px 0;
+}
+/*  产品区尺寸  */
+.lt_size span.current {
+  color: aliceblue;
+  background-color: orange;
+}
+@keyframes rotate {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(360deg);
+  }
 }
