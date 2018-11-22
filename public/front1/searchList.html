@@ -43,10 +43,10 @@
               <a href="javascript:;"><span>発売日</span><i class="fa fa-angle-down"></i></a>
             </li>
             <li>
-              <a href="javascript:;"><span>価格</span><i class="fa fa-angle-down"></i></a>
+              <a href="javascript:;" data-type="price"><span>価格</span><i class="fa fa-angle-down"></i></a>
             </li>
             <li>
-              <a href="javascript:;"><span>残量</span><i class="fa fa-angle-down"></i></a>
+              <a href="javascript:;" data-type="num"><span>残量</span><i class="fa fa-angle-down"></i></a>
             </li>
             <li>
               <a href="javascript:;"><span>割引</span><i class="fa fa-angle-down"></i></a>
@@ -55,60 +55,7 @@
 
           <!-- 产品区 -->
           <ul class="product mui-clearfix">
-            <li>
-              <img src="images/product.jpg" alt="">
-              <p class="mui-ellipsis-2">【グッズ-ボールペン】とある魔術の禁書目録Ⅲ ボールペン </p>
-              <p>
-                <span class="price">$0.98</span>
-                <span class="oldprice">$980</span>
-              </p>
-              <button class="mui-btn mui-btn-danger">今すぐ買おう</button>
-            </li>
-            <li>
-              <img src="images/product.jpg" alt="">
-              <p class="mui-ellipsis-2">【グッズ-ボールペン】とある魔術の禁書目録Ⅲ ボールペン </p>
-              <p>
-                <span class="price">$0.98</span>
-                <span class="oldprice">$980</span>
-              </p>
-              <button class="mui-btn mui-btn-danger">今すぐ買おう</button>
-            </li>
-            <li>
-              <img src="images/product.jpg" alt="">
-              <p class="mui-ellipsis-2">【グッズ-ボールペン】とある魔術の禁書目録Ⅲ ボールペン </p>
-              <p>
-                <span class="price">$0.98</span>
-                <span class="oldprice">$980</span>
-              </p>
-              <button class="mui-btn mui-btn-danger">今すぐ買おう</button>
-            </li>
-            <li>
-              <img src="images/product.jpg" alt="">
-              <p class="mui-ellipsis-2">【グッズ-ボールペン】とある魔術の禁書目録Ⅲ ボールペン </p>
-              <p>
-                <span class="price">$0.98</span>
-                <span class="oldprice">$980</span>
-              </p>
-              <button class="mui-btn mui-btn-danger">今すぐ買おう</button>
-            </li>
-            <li>
-              <img src="images/product.jpg" alt="">
-              <p class="mui-ellipsis-2">【グッズ-ボールペン】とある魔術の禁書目録Ⅲ ボールペン </p>
-              <p>
-                <span class="price">$0.98</span>
-                <span class="oldprice">$980</span>
-              </p>
-              <button class="mui-btn mui-btn-danger">今すぐ買おう</button>
-            </li>
-            <li>
-              <img src="images/product.jpg" alt="">
-              <p class="mui-ellipsis-2">【グッズ-ボールペン】とある魔術の禁書目録Ⅲ ボールペン </p>
-              <p>
-                <span class="price">$0.98</span>
-                <span class="oldprice">$980</span>
-              </p>
-              <button class="mui-btn mui-btn-danger">今すぐ買おう</button>
-            </li>
+            <!-- 动态坑 -->
           </ul>
 
         </div>
@@ -148,6 +95,22 @@
 
   </div>
 
+  <!-- 产品模板 -->
+  <script type="text/template" id="tmp">
+    {{ each data ele index }}
+    <li>
+      <a href="product.html?productId={{ ele.id }}">
+        <img src="{{ ele.pic[0].picAddr }}" alt="">
+        <p class="mui-ellipsis-2">{{ ele.proName }}</p>
+        <p>
+          <span class="price">${{ ele.price }}</span>
+          <span class="oldprice">${{ ele.oldPrice }}</span>
+        </p>
+        <button class="mui-btn mui-btn-danger">今すぐ買おう</button>
+      </a>
+    </li>
+    {{ /each }}
+  </script>
 
   <script src="lib/zepto/zepto.min.js"></script>
   <script src="lib/mui/js/mui.js"></script>

@@ -19,6 +19,10 @@
   height: 30px;
   line-height: 30px;
 }
+.selectList li a.current span,
+.selectList li a.current i {
+  color: orange;
+}
 .selectList li a span {
   color: #666;
 }

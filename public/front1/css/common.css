@@ -96,6 +96,15 @@ html {
 .container .product {
   padding: 10px;
 }
+.container .product .loading {
+  position: absolute;
+  top: 230px;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  border: 6px solid #0ba0e6;
+  animation: rotate 1s infinite ease-in-out;
+}
 .container .product li {
   width: 48%;
   padding: 10px;
@@ -112,20 +121,24 @@ html {
 .container .product li:nth-child(4) {
   margin: 10px 0;
 }
-.container .product li img {
-  width: 100%;
+.container .product li a {
+  display: block;
+}
+.container .product li a img {
+  width: 200px;
+  height: 150px;
   margin: 0 auto;
 }
-.container .product li p {
+.container .product li a p {
   font-size: 18px;
 }
-.container .product li p > span.oldprice {
+.container .product li a p > span.oldprice {
   text-decoration: line-through;
 }
-.container .product li p > span.price {
+.container .product li a p > span.price {
   color: #e93323;
 }
-.container .product li p:nth-of-type(2) {
+.container .product li a p:nth-of-type(2) {
   margin: 10px 0;
 }
 .container .search {
@@ -148,4 +161,12 @@ html {
   width: 54px;
   height: 40px;
   border-radius: 0 8px 8px 0;
+}
+@keyframes rotate {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(360deg);
+  }
 }
